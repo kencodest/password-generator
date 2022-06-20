@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="password-generator">
+        <div class="theme-btn">
+            <i id="moon" class="fas fa-moon"></i>
+            <i id ="sun" class="fas fa-sun"></i>
+        </div>
+        <h1>Generate a <span class="clr-primary">random password</span></h1>
+        <h4>Never use an insecure password again.</h4>
+        <div class="password-options">
+            <label for="length-el">
+                Password Length:
+                <input type="number" max="50" min="2" id="length-el" name="length" value="15">
+            </label>
+            <div class="checkboxes">
+                <label for="numbers-el">
+                    Include Numbers
+                    <input type="checkbox" id="numbers-el" name="numbers" checked>
+                </label>
+
+                <label for="symbols-el">
+                    Include Symbols
+                    <input type="checkbox" id="symbols-el" name="symbols" checked>
+                </label>
+            </div>
+            
+        </div>
+        <button class="generateBtn" onclick="generatePassword()">Generate passwords</button>
+        <hr>
+        
+        <div class="password-container">
+            <div class="password-icon">
+                <span class="icon firsticon"><i class="fas fa-copy"></i></span>
+                <input type="text" id="first-pass-el" readonly/>
+            </div>
+
+            <div class="password-icon">
+                <span class="icon secondicon"><i class="fas fa-copy"></i></span>
+                <input type="text" id="second-pass-el" readonly/>
+            </div>
+
+            <div class="password-icon">
+                <span class="icon thirdicon"><i class="fas fa-copy"></i></span>
+                <input type="text" id="third-pass-el" readonly/>
+            </div>
+
+            <div class="password-icon">
+                <span class="icon fourthicon"><i class="fas fa-copy"></i></span>
+                <input type="text" id="fourth-pass-el" readonly/>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="index.js"></script>
+</body>
+</html>
